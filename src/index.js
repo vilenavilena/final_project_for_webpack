@@ -1,3 +1,8 @@
-import('./index.scss');
+import("./index.scss");
 
-console.log('hello, world!')
+import { drawGalleryItem } from './item';
+import items from './items';
+
+const galleryRootElement = document.getElementById('galleryRoot');
+
+items.map(item => galleryRootElement.appendChild(drawGalleryItem(item)))
